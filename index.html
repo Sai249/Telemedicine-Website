@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Login Page</title> <link rel="stylesheet" type="text/css" href="styles.css"/>
+    
+  </head>
+  <body>
+    <form action="doctor_login.php" method="post">
+
+    
+    <header class="header">
+      <img src="images/logo.png" id="logo" alt="" />
+
+      <div class="login-modal" id="login-modal">
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Username" autocomplete="username" required>
+          <input type="password" id="password" placeholder="Password" autocomplete="current-password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div id="content">
+        <!-- Content will load here dynamically -->
+      </div>
+
+      <div class="icons">
+        <div id="menubar" class="fas fa-bars"></div>
+        <a href="#">contact</a>
+      </div>
+    </header>
+
+    <div class="background-image">
+      <div class="background-content">
+        <h1>
+          We provide an exceptional <br />
+          patient experience
+        </h1>
+        <p>
+          <!-- Initial visible part of text -->
+
+          <span id="introText">
+            Rediscover the true essence of personalized healthcare with our
+            seamless booking experience.
+          </span>
+          <!-- Additional hidden text -->
+
+          <span id="moreText"  class="hidden-text">
+            Elevate your well-being with our state-of-the-art services and
+            <br />
+            compassionate care.
+          </span>
+        </p>
+        <a
+          href="javascript:void(0);"
+          onclick="toggleText('moreText', 'readMoreBtn')"
+          class="read-more-link"
+          id="readMoreBtn"
+          >Read more</a
+        >
+      </div>
+    </div>
+    <section id="login-sections">
+      <div class="login-section doctor-login">
+        <h2>Doctor Login</h2>
+        <form id="doctorLoginForm" method="post"> 
+          <label for="doctor-username">Username:</label> 
+          <input type="text" id="doctor-username" name="username" autocomplete="username" required /> 
+          <label for="doctor-password">Password:</label> 
+          <input type="password" id="doctor-password" name="password" autocomplete="current-password" required /> 
+          <button type="submit">Login</button>
+    
+        </form>
+      </div>
+
+      <div class="login-section patient-login">
+        <h2>Patient Login</h2>
+        <form id="patientLoginForm" method="post">
+           <label for="patient-username">Username:</label> 
+           <input type="text" id="patient-username" name="username" autocomplete="username" required /> 
+           <label for="patient-password">Password:</label> 
+           <input type="password" id="patient-password" name="password" autocomplete="current-password" required /> 
+          <button type="submit">Login</button>
+        
+      </div>
+    </section>
+    <section id="doctor-dashboard" style="display:none;"> 
+      <header> <h1>Doctor Dashboard</h1> </header> 
+      <main> <p>Welcome, Doctor! Here you can manage your appointments, view patient records, and more.</p> </main>
+     </section> <section id="patient-dashboard" style="display:none;"> <header> <h1>Patient Dashboard</h1> </header> 
+      <main>m
+        <p>Welcome, Patient! Here you can book appointments, view your medical history, and more.</p> 
+      </main>
+    </section>
+
+    <section id="about">
+      <div class="main-about">
+        <div class="inner-about">
+          <div class="about-content">
+            <h1>about us</h1>
+            <p>
+              <!-- Initial visible part of text -->
+    
+              <span id="introText1">
+                Rediscover the true essence of personalized healthcare with our
+                seamless booking experience.
+              </span>
+              <!-- Additional hidden text -->
+    
+              <span id="moreText1" class="hidden-text>
+                Elevate your well-being with our state-of-the-art services and
+                <br />
+                compassionate care.
+              </span>
+            </p>
+            <a href="javascript:void(0);" onclick="toggleText('moreText1', 'readMoreBtn1')"
+              class="read-more-link"
+              id="readMoreBtn1">
+              Read more</a>
+          </div>
+        </div>
+        <div class="inner-about">
+          <div class="inner-about-image">
+            <img src="images/chiness.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="service-content">
+        <d class="left-service-content">
+          <h1>Our special services</h1>
+          <br>
+            Advanced Diagnostics: Utilizing the latest technology, we offer precise and thorough diagnostic services to ensure accurate and timely results, guiding you towards the best treatment options.</br>
+
+            Personalized Treatment Plans: We believe in personalized care. Our team of experts collaborates to create customized treatment plans that address your specific health concerns, promoting a holistic approach to your well-being.</br>
+            
+            24/7 Virtual Consultations: Access top-notch medical advice anytime, anywhere with our round-the-clock virtual consultation services. Our dedicated team is always here to support your health needs from the comfort of your home.</br> 
+          </p>
+        </div>
+        <div class="right-service-content">
+          <div class="right-btn">
+            <a href="#">See all services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-services">
+        <div class="inner-services-content">
+          <div class="service-icon">
+            <i class="fas fa-notes-medical"></i>
+          </div>
+          <h2>Personalized Care:</h2>
+          <p>
+            We tailor our healthcare services to meet your unique needs, ensuring that you receive the most effective and compassionate care possible.
+             Your health journey is personal, and we respect that.
+          </p>
+        </div>
+        <div class="inner-services-content">
+          <div class="service-icon">
+            <i class="fas fa-hospital-user"></i>
+          </div>
+          <h2>Advanced Technology:</h2>
+          <p>
+            We utilize state-of-the-art medical technology and techniques to provide the highest quality care.
+            Our innovative solutions and cutting-edge equipment mean you get the best treatment available.
+          </p>
+        </div>
+        <div class="inner-services-content">
+          <div class="service-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h2>Exceptional Patient Experience:</h2>
+          <p>
+            From the moment you walk through our doors, our dedicated team ensures your comfort and well-being.
+             Our patient-first approach means we go above and beyond to make your healthcare experience exceptional. 
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h1>Gallery</h1>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal1.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal2.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal3.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal4.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal5.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+
+      <div class="inner-gallery">
+        <img
+          src="images/gal6.jpg"
+          alt=""
+          style="width: 1000px; height: 200px"
+        />
+      </div>
+    </section>
+
+    <div class="why-choseus">
+      <div class="main-chose">
+        <div class="inner-chose">
+          <img
+            src="images/cute.jpg"
+            alt=""
+            style="width: 300px; height: 200px"
+          />
+        </div>
+
+        <div class="inner-chose">
+          <h1>why chose us</h1>
+
+          <div class="inner-chose-content">
+            <div class="main-inner-chose">
+              <div class="chose-icon">
+                <i class="fas fa-notes-medical"></i>
+              </div>
+              <div class="icon-content">
+                <p>
+                  Personalized Care: We tailor our healthcare services to meet your unique needs,
+                   ensuring that you receive the most effective and compassionate care possible.
+                </p>
+              </div>
+            </div>
+
+            <div class="main-inner-chose">
+              <div class="chose-icon">
+                <i class="fas fa-hospital-user"></i>
+              </div>
+              <div class="icon-content">
+                <p>
+                  Advanced Technology: We utilize state-of-the-art medical technology and 
+                  techniques to provide the highest quality care.
+                </p>
+              </div>
+            </div>
+
+            <div class="main-inner-chose">
+              <div class="chose-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <div class="icon-content">
+                <p>
+                  Exceptional Patient Experience: From the moment you walk through our doors, 
+                  our dedicated team ensures your comfort and well-being.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="our-doctors">
+      <h1>Our special doctors</h1>
+
+      <div class="main-doctor">
+        <div class="inner-doctor">
+          <img src="images/gal3.jpg" alt="" />
+          <div class="doc-icons">
+            <div class="fab fa-facebook"></div>
+            <div class="fab fa-twitter"></div>
+            <div class="fab fa-instagram"></div>
+            <div class="fab fa-linkedin"></div>
+          </div>
+        </div>
+
+        <div class="inner-doctor">
+          <img src="images/gal2.jpg" alt="" />
+          <div class="doc-icons">
+            <div class="fab fa-facebook"></div>
+            <div class="fab fa-twitter"></div>
+            <div class="fab fa-instagram"></div>
+            <div class="fab fa-linkedin"></div>
+          </div>
+        </div>
+
+        <div class="inner-doctor">
+          <img src="images/gal5.jpg" alt="" />
+          <div class="doc-icons">
+            <div class="fab fa-facebook"></div>
+            <div class="fab fa-twitter"></div>
+            <div class="fab fa-instagram"></div>
+            <div class="fab fa-linkedin"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="contact">
+      <div class="footer">
+        <div class="main-footer">
+          <div class="inner-footer">
+            <img src="images/logo.png" alt="" />
+          </div>
+          <div class="inner-footer">
+            <h2>Insurance</h2>
+            <a href="#">Health Insurance</a>
+            <a href="#">Health insurance plans for parents</a>
+            <a href="#">Health insurance for family</a>
+            <a href="#"> Health insurance for senior citizen</a>
+            <a href="#">Health insurance for individuals</a>
+          </div>
+          <div class="inner-footer">
+            <h2>Resources</h2>
+            <a href="#">Hospital Portal</a>
+            <a href="#">Employee Login</a>
+            <a href="#">Glossary</a>
+            <a href="#">Downloads</a>
+            <a href="#">Preventive Health Check Up</a>
+          </div>
+          <div class="inner-footer">
+            <h2>Regulatory</h2>
+            <a href="#">List Of Products</a>
+            <a href="#">Products With Instalment Facility</a>
+            <a href="#">Insurance Information Bureau</a>
+            <a href="#">Underwriting Philosophy</a>
+            <a href="#">Public Disclosures</a>
+          
+        </div>
+      </div>
+    </section>
+    <script>
+    function toggleText(moreTextId, btnTextId) {
+      var moreText = document.getElementById(moreTextId);
+      var btnText = document.getElementById(btnTextId);
+      if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "inline";
+        btnText.innerText = "Read less";
+      } 
+      else {
+      moreText.style.display = "none";
+      btnText.innerText = "Read more";
+    }
+  }
+
+      
+    </script>
+  </body>
+</html>
+
+<!-- provide an exceptional patient experience
+<i class="fas fa-notes-medical"></i>
+<i class="fas fa-hospital-user"></i>
+<i class="fas fa-user-md"></i>
+-->
